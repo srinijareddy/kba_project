@@ -1,0 +1,202 @@
+{
+  "name": "fabric-network",
+  "description": "Generated network configuration file",
+  "version": "0.1",
+  "client": {
+    "organization": "customer.auto.com",
+    "credentialStore": {
+      "path": "/tmp/hfc-kvs",
+      "cryptoStore": {
+        "path": "/tmp/hfc-cvs"
+      },
+      "wallet": "wallet-name"
+    }
+  },
+  "organizations": {
+    "auto.com": {
+      "mspid": "auto-com",
+      "orderers": [
+        "orderer1.auto.com",
+        "orderer2.auto.com",
+        "orderer3.auto.com",
+        "orderer4.auto.com"
+      ],
+      "users": {
+        "Admin": {
+          "cert": "/keyfiles/ordererOrganizations/auto.com/users/Admin@auto.com/msp/signcerts/Admin@auto.com-cert.pem",
+          "private_key": "/keyfiles/ordererOrganizations/auto.com/users/Admin@auto.com/msp/keystore/priv_sk"
+        }
+      }
+    },
+    "customer.auto.com": {
+      "mspid": "customer-auto-com",
+      "peers": [
+        "peer1.customer.auto.com"
+      ],
+      "users": {
+        "Admin": {
+          "cert": "/keyfiles/peerOrganizations/customer.auto.com/users/Admin@customer.auto.com/msp/signcerts/Admin@customer.auto.com-cert.pem",
+          "private_key": "/keyfiles/peerOrganizations/customer.auto.com/users/Admin@customer.auto.com/msp/keystore/priv_sk"
+        }
+      }
+    },
+    "manufacturer.auto.com": {
+      "mspid": "manufacturer-auto-com",
+      "peers": [
+        "peer1.manufacturer.auto.com"
+      ],
+      "users": {
+        "Admin": {
+          "cert": "/keyfiles/peerOrganizations/manufacturer.auto.com/users/Admin@manufacturer.auto.com/msp/signcerts/Admin@manufacturer.auto.com-cert.pem",
+          "private_key": "/keyfiles/peerOrganizations/manufacturer.auto.com/users/Admin@manufacturer.auto.com/msp/keystore/priv_sk"
+        }
+      }
+    },
+    "retailer.auto.com": {
+      "mspid": "retailer-auto-com",
+      "peers": [
+        "peer1.retailer.auto.com"
+      ],
+      "users": {
+        "Admin": {
+          "cert": "/keyfiles/peerOrganizations/retailer.auto.com/users/Admin@retailer.auto.com/msp/signcerts/Admin@retailer.auto.com-cert.pem",
+          "private_key": "/keyfiles/peerOrganizations/retailer.auto.com/users/Admin@retailer.auto.com/msp/keystore/priv_sk"
+        }
+      }
+    },
+    "supplier.auto.com": {
+      "mspid": "supplier-auto-com",
+      "peers": [
+        "peer1.supplier.auto.com"
+      ],
+      "users": {
+        "Admin": {
+          "cert": "/keyfiles/peerOrganizations/supplier.auto.com/users/Admin@supplier.auto.com/msp/signcerts/Admin@supplier.auto.com-cert.pem",
+          "private_key": "/keyfiles/peerOrganizations/supplier.auto.com/users/Admin@supplier.auto.com/msp/keystore/priv_sk"
+        }
+      }
+    }
+  },
+  "orderers": {
+    "orderer1.auto.com": {
+      "url": "192.168.68.141:7012",
+      "grpcOptions": {
+        "grpc.ssl_target_name_override": "orderer1.auto.com",
+        "grpc-max-send-message-length": 15
+      },
+      "tlsCACerts": {
+        "path": "/keyfiles/ordererOrganizations/auto.com/orderers/orderer1.auto.com/tls/ca.crt"
+      }
+    },
+    "orderer2.auto.com": {
+      "url": "192.168.68.141:7013",
+      "grpcOptions": {
+        "grpc.ssl_target_name_override": "orderer2.auto.com",
+        "grpc-max-send-message-length": 15
+      },
+      "tlsCACerts": {
+        "path": "/keyfiles/ordererOrganizations/auto.com/orderers/orderer2.auto.com/tls/ca.crt"
+      }
+    },
+    "orderer3.auto.com": {
+      "url": "192.168.68.141:7014",
+      "grpcOptions": {
+        "grpc.ssl_target_name_override": "orderer3.auto.com",
+        "grpc-max-send-message-length": 15
+      },
+      "tlsCACerts": {
+        "path": "/keyfiles/ordererOrganizations/auto.com/orderers/orderer3.auto.com/tls/ca.crt"
+      }
+    },
+    "orderer4.auto.com": {
+      "url": "192.168.68.141:7015",
+      "grpcOptions": {
+        "grpc.ssl_target_name_override": "orderer4.auto.com",
+        "grpc-max-send-message-length": 15
+      },
+      "tlsCACerts": {
+        "path": "/keyfiles/ordererOrganizations/auto.com/orderers/orderer4.auto.com/tls/ca.crt"
+      }
+    }
+  },
+  "peers": {
+    "peer1.manufacturer.auto.com": {
+      "url": "192.168.68.141:7004",
+      "grpcOptions": {
+        "grpc.ssl_target_name_override": "peer1.manufacturer.auto.com",
+        "grpc-max-send-message-length": 15
+      },
+      "tlsCACerts": {
+        "path": "/keyfiles/peerOrganizations/manufacturer.auto.com/peers/peer1.manufacturer.auto.com/tls/ca.crt"
+      }
+    },
+    "peer1.supplier.auto.com": {
+      "url": "192.168.68.141:7005",
+      "grpcOptions": {
+        "grpc.ssl_target_name_override": "peer1.supplier.auto.com",
+        "grpc-max-send-message-length": 15
+      },
+      "tlsCACerts": {
+        "path": "/keyfiles/peerOrganizations/supplier.auto.com/peers/peer1.supplier.auto.com/tls/ca.crt"
+      }
+    },
+    "peer1.retailer.auto.com": {
+      "url": "192.168.68.141:7006",
+      "grpcOptions": {
+        "grpc.ssl_target_name_override": "peer1.retailer.auto.com",
+        "grpc-max-send-message-length": 15
+      },
+      "tlsCACerts": {
+        "path": "/keyfiles/peerOrganizations/retailer.auto.com/peers/peer1.retailer.auto.com/tls/ca.crt"
+      }
+    },
+    "peer1.customer.auto.com": {
+      "url": "192.168.68.141:7007",
+      "grpcOptions": {
+        "grpc.ssl_target_name_override": "peer1.customer.auto.com",
+        "grpc-max-send-message-length": 15
+      },
+      "tlsCACerts": {
+        "path": "/keyfiles/peerOrganizations/customer.auto.com/peers/peer1.customer.auto.com/tls/ca.crt"
+      }
+    }
+  },
+  "certificateAuthorities": {
+    "ca1.manufacturer.auto.com": {
+      "url": "https://192.168.68.141:7000",
+      "tlsCACerts": {
+        "path": "/keyfiles/peerOrganizations/manufacturer.auto.com/ca/ca1.manufacturer.auto.com-cert.pem"
+      },
+      "httpOptions": { "verify": "false" },
+      "caName": "ca1",
+      "registrar": { "enrollId": "admin", "enrollSecret": "adminpw" }
+    },
+    "ca1.supplier.auto.com": {
+      "url": "https://192.168.68.141:7001",
+      "tlsCACerts": {
+        "path": "/keyfiles/peerOrganizations/supplier.auto.com/ca/ca1.supplier.auto.com-cert.pem"
+      },
+      "httpOptions": { "verify": "false" },
+      "caName": "ca1",
+      "registrar": { "enrollId": "admin", "enrollSecret": "adminpw" }
+    },
+    "ca1.retailer.auto.com": {
+      "url": "https://192.168.68.141:7002",
+      "tlsCACerts": {
+        "path": "/keyfiles/peerOrganizations/retailer.auto.com/ca/ca1.retailer.auto.com-cert.pem"
+      },
+      "httpOptions": { "verify": "false" },
+      "caName": "ca1",
+      "registrar": { "enrollId": "admin", "enrollSecret": "adminpw" }
+    },
+    "ca1.customer.auto.com": {
+      "url": "https://192.168.68.141:7003",
+      "tlsCACerts": {
+        "path": "/keyfiles/peerOrganizations/customer.auto.com/ca/ca1.customer.auto.com-cert.pem"
+      },
+      "httpOptions": { "verify": "false" },
+      "caName": "ca1",
+      "registrar": { "enrollId": "admin", "enrollSecret": "adminpw" }
+    }
+  }
+}

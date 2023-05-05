@@ -1,0 +1,147 @@
+---
+"name": "fabric-network"
+"x-type": "hlfv1"
+"version": "1.0.0"
+"channels":
+  "autochannel":
+    "orderers":
+    - "orderer1.auto.com"
+    - "orderer2.auto.com"
+    - "orderer3.auto.com"
+    - "orderer4.auto.com"
+    "peers":
+    - "peer1.manufacturer.auto.com"
+    - "peer1.supplier.auto.com"
+    - "peer1.retailer.auto.com"
+    - "peer1.customer.auto.com"
+"organizations":
+  "auto.com":
+    "mspid": "auto-com"
+    "peers": []
+    "orderers":
+    - "orderer1.auto.com"
+    - "orderer2.auto.com"
+    - "orderer3.auto.com"
+    - "orderer4.auto.com"
+  "customer.auto.com":
+    "mspid": "customer-auto-com"
+    "peers":
+    - "peer1.customer.auto.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca1.customer.auto.com"
+  "manufacturer.auto.com":
+    "mspid": "manufacturer-auto-com"
+    "peers":
+    - "peer1.manufacturer.auto.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca1.manufacturer.auto.com"
+  "retailer.auto.com":
+    "mspid": "retailer-auto-com"
+    "peers":
+    - "peer1.retailer.auto.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca1.retailer.auto.com"
+  "supplier.auto.com":
+    "mspid": "supplier-auto-com"
+    "peers":
+    - "peer1.supplier.auto.com"
+    "orderers": []
+    "certificateAuthorities":
+    - "ca1.supplier.auto.com"
+
+"orderers":
+  "orderer1.auto.com":
+    "url": "grpcs://192.168.68.141:7012"
+    "grpcOptions":
+      "ssl-target-name-override": "orderer1.auto.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICjzCCAjagAwIBAgIUU5x5GOu4z1kuTu6ZQetQmW3glIYwCgYIKoZIzj0EAwIw\nZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMREwDwYDVQQKDAhhdXRvLmNvbTEXMBUGA1UEAwwOdGxzY2EuYXV0\nby5jb20wHhcNMjMwNTA1MDQ1NTEzWhcNMzMwNTAyMDQ1NTEzWjBkMQswCQYDVQQG\nEwJVUzEXMBUGA1UECAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gx\nETAPBgNVBAoMCGF1dG8uY29tMRcwFQYDVQQDDA50bHNjYS5hdXRvLmNvbTBZMBMG\nByqGSM49AgEGCCqGSM49AwEHA0IABF5G5aNU93WQ6f/znsvY8rkd4HoI1xcMiMos\nf49j/ZWobzU0yoT0asQ01HmVJBpmE6eGHFgrpcBkt6i+4ZXMKPmjgcUwgcIwHQYD\nVR0OBBYEFM+A+b0mFi+56yiMZ4aase5al66KMB8GA1UdIwQYMBaAFM+A+b0mFi+5\n6yiMZ4aase5al66KMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0G\nA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBABgNVHREEOTA3hwTAqESNgg50\nbHNjYS5hdXRvLmNvbYIOdGxzY2EtYXV0by1jb22CCWxvY2FsaG9zdIcEfwAAATAK\nBggqhkjOPQQDAgNHADBEAiAWuSLOYlc4Ee2We0oEdX4gkjv6gcNoI9NduH5olmiC\nBQIgMhcxfJMafEbsVbr4OpWVYZiglFaXvVoTLPMsRn/EFHc=\n-----END CERTIFICATE-----"
+  "orderer2.auto.com":
+    "url": "grpcs://192.168.68.141:7013"
+    "grpcOptions":
+      "ssl-target-name-override": "orderer2.auto.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICjzCCAjagAwIBAgIUU5x5GOu4z1kuTu6ZQetQmW3glIYwCgYIKoZIzj0EAwIw\nZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMREwDwYDVQQKDAhhdXRvLmNvbTEXMBUGA1UEAwwOdGxzY2EuYXV0\nby5jb20wHhcNMjMwNTA1MDQ1NTEzWhcNMzMwNTAyMDQ1NTEzWjBkMQswCQYDVQQG\nEwJVUzEXMBUGA1UECAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gx\nETAPBgNVBAoMCGF1dG8uY29tMRcwFQYDVQQDDA50bHNjYS5hdXRvLmNvbTBZMBMG\nByqGSM49AgEGCCqGSM49AwEHA0IABF5G5aNU93WQ6f/znsvY8rkd4HoI1xcMiMos\nf49j/ZWobzU0yoT0asQ01HmVJBpmE6eGHFgrpcBkt6i+4ZXMKPmjgcUwgcIwHQYD\nVR0OBBYEFM+A+b0mFi+56yiMZ4aase5al66KMB8GA1UdIwQYMBaAFM+A+b0mFi+5\n6yiMZ4aase5al66KMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0G\nA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBABgNVHREEOTA3hwTAqESNgg50\nbHNjYS5hdXRvLmNvbYIOdGxzY2EtYXV0by1jb22CCWxvY2FsaG9zdIcEfwAAATAK\nBggqhkjOPQQDAgNHADBEAiAWuSLOYlc4Ee2We0oEdX4gkjv6gcNoI9NduH5olmiC\nBQIgMhcxfJMafEbsVbr4OpWVYZiglFaXvVoTLPMsRn/EFHc=\n-----END CERTIFICATE-----"
+  "orderer3.auto.com":
+    "url": "grpcs://192.168.68.141:7014"
+    "grpcOptions":
+      "ssl-target-name-override": "orderer3.auto.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICjzCCAjagAwIBAgIUU5x5GOu4z1kuTu6ZQetQmW3glIYwCgYIKoZIzj0EAwIw\nZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMREwDwYDVQQKDAhhdXRvLmNvbTEXMBUGA1UEAwwOdGxzY2EuYXV0\nby5jb20wHhcNMjMwNTA1MDQ1NTEzWhcNMzMwNTAyMDQ1NTEzWjBkMQswCQYDVQQG\nEwJVUzEXMBUGA1UECAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gx\nETAPBgNVBAoMCGF1dG8uY29tMRcwFQYDVQQDDA50bHNjYS5hdXRvLmNvbTBZMBMG\nByqGSM49AgEGCCqGSM49AwEHA0IABF5G5aNU93WQ6f/znsvY8rkd4HoI1xcMiMos\nf49j/ZWobzU0yoT0asQ01HmVJBpmE6eGHFgrpcBkt6i+4ZXMKPmjgcUwgcIwHQYD\nVR0OBBYEFM+A+b0mFi+56yiMZ4aase5al66KMB8GA1UdIwQYMBaAFM+A+b0mFi+5\n6yiMZ4aase5al66KMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0G\nA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBABgNVHREEOTA3hwTAqESNgg50\nbHNjYS5hdXRvLmNvbYIOdGxzY2EtYXV0by1jb22CCWxvY2FsaG9zdIcEfwAAATAK\nBggqhkjOPQQDAgNHADBEAiAWuSLOYlc4Ee2We0oEdX4gkjv6gcNoI9NduH5olmiC\nBQIgMhcxfJMafEbsVbr4OpWVYZiglFaXvVoTLPMsRn/EFHc=\n-----END CERTIFICATE-----"
+  "orderer4.auto.com":
+    "url": "grpcs://192.168.68.141:7015"
+    "grpcOptions":
+      "ssl-target-name-override": "orderer4.auto.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICjzCCAjagAwIBAgIUU5x5GOu4z1kuTu6ZQetQmW3glIYwCgYIKoZIzj0EAwIw\nZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMREwDwYDVQQKDAhhdXRvLmNvbTEXMBUGA1UEAwwOdGxzY2EuYXV0\nby5jb20wHhcNMjMwNTA1MDQ1NTEzWhcNMzMwNTAyMDQ1NTEzWjBkMQswCQYDVQQG\nEwJVUzEXMBUGA1UECAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gx\nETAPBgNVBAoMCGF1dG8uY29tMRcwFQYDVQQDDA50bHNjYS5hdXRvLmNvbTBZMBMG\nByqGSM49AgEGCCqGSM49AwEHA0IABF5G5aNU93WQ6f/znsvY8rkd4HoI1xcMiMos\nf49j/ZWobzU0yoT0asQ01HmVJBpmE6eGHFgrpcBkt6i+4ZXMKPmjgcUwgcIwHQYD\nVR0OBBYEFM+A+b0mFi+56yiMZ4aase5al66KMB8GA1UdIwQYMBaAFM+A+b0mFi+5\n6yiMZ4aase5al66KMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0G\nA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBABgNVHREEOTA3hwTAqESNgg50\nbHNjYS5hdXRvLmNvbYIOdGxzY2EtYXV0by1jb22CCWxvY2FsaG9zdIcEfwAAATAK\nBggqhkjOPQQDAgNHADBEAiAWuSLOYlc4Ee2We0oEdX4gkjv6gcNoI9NduH5olmiC\nBQIgMhcxfJMafEbsVbr4OpWVYZiglFaXvVoTLPMsRn/EFHc=\n-----END CERTIFICATE-----"
+
+"peers":
+  "peer1.manufacturer.auto.com":
+    "url": "grpcs://192.168.68.141:7004"
+    "grpcOptions":
+      "ssl-target-name-override": "peer1.manufacturer.auto.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC4jCCAoigAwIBAgIUN4tiBAJ9BokJbC/kwgW9RmdPSJ8wCgYIKoZIzj0EAwIw\nfzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMR4wHAYDVQQKDBVtYW51ZmFjdHVyZXIuYXV0by5jb20xJTAjBgNV\nBAMMHHRsc2NhMS5tYW51ZmFjdHVyZXIuYXV0by5jb20wHhcNMjMwNTA1MDQ1NjA4\nWhcNMzMwNTAyMDQ1NjA4WjB/MQswCQYDVQQGEwJVUzEXMBUGA1UECAwOTm9ydGgg\nQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxHjAcBgNVBAoMFW1hbnVmYWN0dXJl\nci5hdXRvLmNvbTElMCMGA1UEAwwcdGxzY2ExLm1hbnVmYWN0dXJlci5hdXRvLmNv\nbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABMhdLAXo/N8bAWVybF9WrHgVW2dG\ny+C5qpgxYiK2FjmiY5C4FEgepPRMhWvTm/BlGTL+UIylwikPvq2/Ii4MsxCjgeEw\ngd4wHQYDVR0OBBYEFCy2EyQN8OrzfULVcRIrS39ELN1TMB8GA1UdIwQYMBaAFCy2\nEyQN8OrzfULVcRIrS39ELN1TMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQD\nAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBcBgNVHREEVTBThwTA\nqESNghx0bHNjYTEubWFudWZhY3R1cmVyLmF1dG8uY29tghx0bHNjYTEtbWFudWZh\nY3R1cmVyLWF1dG8tY29tgglsb2NhbGhvc3SHBH8AAAEwCgYIKoZIzj0EAwIDSAAw\nRQIgYh83hFYCSNSCJ2/pobvIedFITTrX461C73BaCs29cDwCIQDJVAeYI8jLrz6L\nzoF+8MGwXZXCEkdy7WRNFX/oGBMOXQ==\n-----END CERTIFICATE-----"
+  "peer1.supplier.auto.com":
+    "url": "grpcs://192.168.68.141:7005"
+    "grpcOptions":
+      "ssl-target-name-override": "peer1.supplier.auto.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICyjCCAnCgAwIBAgIUASNSX1fHf2VZDTxw/EF2ZDYF3BowCgYIKoZIzj0EAwIw\ndzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRowGAYDVQQKDBFzdXBwbGllci5hdXRvLmNvbTEhMB8GA1UEAwwY\ndGxzY2ExLnN1cHBsaWVyLmF1dG8uY29tMB4XDTIzMDUwNTA0NTY0NVoXDTMzMDUw\nMjA0NTY0NVowdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5h\nMRAwDgYDVQQHDAdSYWxlaWdoMRowGAYDVQQKDBFzdXBwbGllci5hdXRvLmNvbTEh\nMB8GA1UEAwwYdGxzY2ExLnN1cHBsaWVyLmF1dG8uY29tMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAEOWFTa7lnKDuyfqCG/7AtD82pfn22SqjoT0biK00ACKPf675q\nOLHdtQpfAAzWGlTxw3HP7zIZpiEZje+C3Gl806OB2TCB1jAdBgNVHQ4EFgQU3YlR\nctH9igAjcsgdbYSlLb8plFgwHwYDVR0jBBgwFoAU3YlRctH9igAjcsgdbYSlLb8p\nlFgwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYI\nKwYBBQUHAwEGCCsGAQUFBwMCMFQGA1UdEQRNMEuHBMCoRI2CGHRsc2NhMS5zdXBw\nbGllci5hdXRvLmNvbYIYdGxzY2ExLXN1cHBsaWVyLWF1dG8tY29tgglsb2NhbGhv\nc3SHBH8AAAEwCgYIKoZIzj0EAwIDSAAwRQIgBeUjAOriaXQ1KjB4aayeif4Cb0Tx\nOGTA/T4PIhe7nNoCIQD3H5+L9Qde/6QdGZTpp6JG0NPU0gcFsZiGwSNlYWCt3g==\n-----END CERTIFICATE-----"
+  "peer1.retailer.auto.com":
+    "url": "grpcs://192.168.68.141:7006"
+    "grpcOptions":
+      "ssl-target-name-override": "peer1.retailer.auto.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICyTCCAnCgAwIBAgIUSRRMaTcV8sw4hqlpDTVK+yxt+fYwCgYIKoZIzj0EAwIw\ndzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRowGAYDVQQKDBFyZXRhaWxlci5hdXRvLmNvbTEhMB8GA1UEAwwY\ndGxzY2ExLnJldGFpbGVyLmF1dG8uY29tMB4XDTIzMDUwNTA0NTYyN1oXDTMzMDUw\nMjA0NTYyN1owdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5h\nMRAwDgYDVQQHDAdSYWxlaWdoMRowGAYDVQQKDBFyZXRhaWxlci5hdXRvLmNvbTEh\nMB8GA1UEAwwYdGxzY2ExLnJldGFpbGVyLmF1dG8uY29tMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAE9AIQf2Jslww5KDZfGdj6zqsBV9FbX69tDwAh94EGlTDfG1AF\n3zEBVBY9QBTharL+xZ4mQMn23/k1RDUQL7kMyKOB2TCB1jAdBgNVHQ4EFgQURJbu\ntnjWS0I/YHmbmDJnREfaT2UwHwYDVR0jBBgwFoAURJbutnjWS0I/YHmbmDJnREfa\nT2UwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYI\nKwYBBQUHAwEGCCsGAQUFBwMCMFQGA1UdEQRNMEuHBMCoRI2CGHRsc2NhMS5yZXRh\naWxlci5hdXRvLmNvbYIYdGxzY2ExLXJldGFpbGVyLWF1dG8tY29tgglsb2NhbGhv\nc3SHBH8AAAEwCgYIKoZIzj0EAwIDRwAwRAIgCxhCdJy3AwndHhJDrMgKp80WMAN5\n8mhVO2M77R03bJgCIHIagkSaECA62SjwIOEK8hNXUjDc9BKEIjhX1NJ/ZMaN\n-----END CERTIFICATE-----"
+  "peer1.customer.auto.com":
+    "url": "grpcs://192.168.68.141:7007"
+    "grpcOptions":
+      "ssl-target-name-override": "peer1.customer.auto.com"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICyTCCAnCgAwIBAgIUexy119dt3WssCqCnEnkb1J321UIwCgYIKoZIzj0EAwIw\ndzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRowGAYDVQQKDBFjdXN0b21lci5hdXRvLmNvbTEhMB8GA1UEAwwY\ndGxzY2ExLmN1c3RvbWVyLmF1dG8uY29tMB4XDTIzMDUwNTA0NTU1MFoXDTMzMDUw\nMjA0NTU1MFowdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5h\nMRAwDgYDVQQHDAdSYWxlaWdoMRowGAYDVQQKDBFjdXN0b21lci5hdXRvLmNvbTEh\nMB8GA1UEAwwYdGxzY2ExLmN1c3RvbWVyLmF1dG8uY29tMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAEW4PDLM78RwLeMYP6CjBDkqDcxsylThnnGDIhqR3XiQYXjaqU\nZgeTjy9Xh/SfLohNIYQyWfeQiq6L1IF0qa3u4qOB2TCB1jAdBgNVHQ4EFgQUGAFH\nnlTRd/o5b/MwFNFQhWUWH28wHwYDVR0jBBgwFoAUGAFHnlTRd/o5b/MwFNFQhWUW\nH28wDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYI\nKwYBBQUHAwEGCCsGAQUFBwMCMFQGA1UdEQRNMEuHBMCoRI2CGHRsc2NhMS5jdXN0\nb21lci5hdXRvLmNvbYIYdGxzY2ExLWN1c3RvbWVyLWF1dG8tY29tgglsb2NhbGhv\nc3SHBH8AAAEwCgYIKoZIzj0EAwIDRwAwRAIgRn29rFkSsHjfHh94wpWS+BjRReEp\nxm3cuPK6S+01o78CIBXSthr21Hkwlaj91Wf7IAb97/LAV+gWwD7B8Azmx9eZ\n-----END CERTIFICATE-----"
+
+"certificateAuthorities":
+  "ca1.manufacturer.auto.com":
+    "url": "https://192.168.68.141:7000"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIIC1jCCAnygAwIBAgIUMKXevCJeJjYZXRM5wFWZ/v16zv4wCgYIKoZIzj0EAwIw\nfDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMR4wHAYDVQQKDBVtYW51ZmFjdHVyZXIuYXV0by5jb20xIjAgBgNV\nBAMMGWNhMS5tYW51ZmFjdHVyZXIuYXV0by5jb20wHhcNMjMwNTA1MDQ1NjA4WhcN\nMzMwNTAyMDQ1NjA4WjB8MQswCQYDVQQGEwJVUzEXMBUGA1UECAwOTm9ydGggQ2Fy\nb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxHjAcBgNVBAoMFW1hbnVmYWN0dXJlci5h\ndXRvLmNvbTEiMCAGA1UEAwwZY2ExLm1hbnVmYWN0dXJlci5hdXRvLmNvbTBZMBMG\nByqGSM49AgEGCCqGSM49AwEHA0IABALbu0jsgjlnrqNfiURWDEE7yIwVyiabtU54\nneDcDxFuhFJ07oAZ6VIhB85xigRAEhfxS/NqRz/yR2X2aS9CywOjgdswgdgwHQYD\nVR0OBBYEFM9TO+9+enD0+Squ9SNY41tPu3vQMB8GA1UdIwQYMBaAFM9TO+9+enD0\n+Squ9SNY41tPu3vQMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0G\nA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBWBgNVHREETzBNhwTAqESNghlj\nYTEubWFudWZhY3R1cmVyLmF1dG8uY29tghljYTEtbWFudWZhY3R1cmVyLWF1dG8t\nY29tgglsb2NhbGhvc3SHBH8AAAEwCgYIKoZIzj0EAwIDSAAwRQIhAIkjNwHE/Ymg\nuBEdCyUgL3N0Ol5dopZUn5c7pGSmFZ4CAiB2gndVk0mOUi8uPcX97if9+Y0CrBvn\n++NL5WF6X2vpXA==\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca1"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"
+  "ca1.supplier.auto.com":
+    "url": "https://192.168.68.141:7001"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICvTCCAmSgAwIBAgIUAYNQWt4XJgdLGiHZe6KVhgbTSqQwCgYIKoZIzj0EAwIw\ndDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRowGAYDVQQKDBFzdXBwbGllci5hdXRvLmNvbTEeMBwGA1UEAwwV\nY2ExLnN1cHBsaWVyLmF1dG8uY29tMB4XDTIzMDUwNTA0NTY0NVoXDTMzMDUwMjA0\nNTY0NVowdDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAw\nDgYDVQQHDAdSYWxlaWdoMRowGAYDVQQKDBFzdXBwbGllci5hdXRvLmNvbTEeMBwG\nA1UEAwwVY2ExLnN1cHBsaWVyLmF1dG8uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0D\nAQcDQgAEo9Q3+KuqnzubX/Lh8Za/7SWFgQNBh2Sg9zYb6AAMtNpVKVc+/DGbRuho\nEBr4myQJY2gCl+8HeAR64fH7kY/BOKOB0zCB0DAdBgNVHQ4EFgQUfdm1w5ZiQ1tv\nPz8ER1IkiY+eI40wHwYDVR0jBBgwFoAUfdm1w5ZiQ1tvPz8ER1IkiY+eI40wDwYD\nVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUH\nAwEGCCsGAQUFBwMCME4GA1UdEQRHMEWHBMCoRI2CFWNhMS5zdXBwbGllci5hdXRv\nLmNvbYIVY2ExLXN1cHBsaWVyLWF1dG8tY29tgglsb2NhbGhvc3SHBH8AAAEwCgYI\nKoZIzj0EAwIDRwAwRAIgb/sDCtL28fDw0XOdn5PSTmUm16jtMqjVhIAmFUI+SkcC\nIHU08z8px2sEF9KcNoL+Xwg4trmG6V45ox+YCeqp2YQI\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca1"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"
+  "ca1.retailer.auto.com":
+    "url": "https://192.168.68.141:7002"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICvjCCAmSgAwIBAgIUJ88M5Tk+cO9N6ySKH8C/YyEBUfcwCgYIKoZIzj0EAwIw\ndDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRowGAYDVQQKDBFyZXRhaWxlci5hdXRvLmNvbTEeMBwGA1UEAwwV\nY2ExLnJldGFpbGVyLmF1dG8uY29tMB4XDTIzMDUwNTA0NTYyN1oXDTMzMDUwMjA0\nNTYyN1owdDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAw\nDgYDVQQHDAdSYWxlaWdoMRowGAYDVQQKDBFyZXRhaWxlci5hdXRvLmNvbTEeMBwG\nA1UEAwwVY2ExLnJldGFpbGVyLmF1dG8uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0D\nAQcDQgAEn0U/qkOhGvb494Ev+ag6A4A587iR7n/RsSsCMFhxmyalsHy1LLXK6qvd\nXRoFfaZn91QrYkOmNN/fqRK9ZpxjLaOB0zCB0DAdBgNVHQ4EFgQUhFFavaGbwp31\nGCAuz1+DuScnxh8wHwYDVR0jBBgwFoAUhFFavaGbwp31GCAuz1+DuScnxh8wDwYD\nVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUH\nAwEGCCsGAQUFBwMCME4GA1UdEQRHMEWHBMCoRI2CFWNhMS5yZXRhaWxlci5hdXRv\nLmNvbYIVY2ExLXJldGFpbGVyLWF1dG8tY29tgglsb2NhbGhvc3SHBH8AAAEwCgYI\nKoZIzj0EAwIDSAAwRQIgVmfsNuBSHhqPlOVWjt9pH/ZOcaiBw4uxhCSC0SgUunQC\nIQCszWBrwv+e5q+Zpf07cOiv/WJruqphXUCFUvb08a/3tQ==\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca1"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"
+  "ca1.customer.auto.com":
+    "url": "https://192.168.68.141:7003"
+    "tlsCACerts":
+      "pem": "-----BEGIN CERTIFICATE-----\nMIICvjCCAmSgAwIBAgIUN+Dvgs59e+l1XJ1YLiZrPqnYWUQwCgYIKoZIzj0EAwIw\ndDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRowGAYDVQQKDBFjdXN0b21lci5hdXRvLmNvbTEeMBwGA1UEAwwV\nY2ExLmN1c3RvbWVyLmF1dG8uY29tMB4XDTIzMDUwNTA0NTU1MFoXDTMzMDUwMjA0\nNTU1MFowdDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAw\nDgYDVQQHDAdSYWxlaWdoMRowGAYDVQQKDBFjdXN0b21lci5hdXRvLmNvbTEeMBwG\nA1UEAwwVY2ExLmN1c3RvbWVyLmF1dG8uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0D\nAQcDQgAEV2CgdlhQOkATfPiROuOSF6syn7BQdrVX+e0eLyNU08YCXQzASQ7U0RaT\ny+wiolUCCHVrCgDSd1Yo/ZnTttuED6OB0zCB0DAdBgNVHQ4EFgQU+PS1C3CecM+9\nYfLlMUtPZ/xm/JQwHwYDVR0jBBgwFoAU+PS1C3CecM+9YfLlMUtPZ/xm/JQwDwYD\nVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUH\nAwEGCCsGAQUFBwMCME4GA1UdEQRHMEWHBMCoRI2CFWNhMS5jdXN0b21lci5hdXRv\nLmNvbYIVY2ExLWN1c3RvbWVyLWF1dG8tY29tgglsb2NhbGhvc3SHBH8AAAEwCgYI\nKoZIzj0EAwIDSAAwRQIhAIPjAQhYTFYuump9zKXYINaER9CorUkVvjI/x+uOhIHc\nAiB/r9g3Vozkm4U6F2nib1EmgD0tsogf0O+bCbBnnZ3zAQ==\n-----END CERTIFICATE-----"
+    "httpOptions":
+      "verify": "false"
+    "caName": "ca1"
+    "registrar":
+      "enrollId": "admin"
+      "enrollSecret": "adminpw"

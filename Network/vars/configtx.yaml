@@ -1,0 +1,231 @@
+---
+Organizations:
+  - &auto-com
+      Name: auto-com
+      ID: auto-com
+      MSPDir: keyfiles/ordererOrganizations/auto.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('auto-com.member')"
+        Writers:
+          Type: Signature
+          Rule: "OR('auto-com.member')"
+        Admins:
+          Type: Signature
+          Rule: "OR('auto-com.admin')"
+  - &customer-auto-com
+      Name: customer-auto-com
+      ID: customer-auto-com
+      MSPDir: keyfiles/peerOrganizations/customer.auto.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('customer-auto-com.admin', 'customer-auto-com.peer', 'customer-auto-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('customer-auto-com.admin', 'customer-auto-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('customer-auto-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('customer-auto-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.68.141
+        Port: 7007
+  - &manufacturer-auto-com
+      Name: manufacturer-auto-com
+      ID: manufacturer-auto-com
+      MSPDir: keyfiles/peerOrganizations/manufacturer.auto.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('manufacturer-auto-com.admin', 'manufacturer-auto-com.peer', 'manufacturer-auto-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('manufacturer-auto-com.admin', 'manufacturer-auto-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('manufacturer-auto-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('manufacturer-auto-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.68.141
+        Port: 7004
+  - &retailer-auto-com
+      Name: retailer-auto-com
+      ID: retailer-auto-com
+      MSPDir: keyfiles/peerOrganizations/retailer.auto.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('retailer-auto-com.admin', 'retailer-auto-com.peer', 'retailer-auto-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('retailer-auto-com.admin', 'retailer-auto-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('retailer-auto-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('retailer-auto-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.68.141
+        Port: 7006
+  - &supplier-auto-com
+      Name: supplier-auto-com
+      ID: supplier-auto-com
+      MSPDir: keyfiles/peerOrganizations/supplier.auto.com/msp
+      Policies:
+        Readers:
+          Type: Signature
+          Rule: "OR('supplier-auto-com.admin', 'supplier-auto-com.peer', 'supplier-auto-com.client')"
+        Writers:
+          Type: Signature
+          Rule: "OR('supplier-auto-com.admin', 'supplier-auto-com.client')"
+        Admins:
+          Type: Signature
+          Rule: "OR('supplier-auto-com.admin')"
+        Endorsement:
+          Type: Signature
+          Rule: "OR('supplier-auto-com.peer')"
+
+      AnchorPeers:
+      - Host: 192.168.68.141
+        Port: 7005
+
+Capabilities:
+  Channel: &ChannelCapabilities
+    V2_0: true
+
+  Orderer: &OrdererCapabilities
+    V2_0: true
+
+  Application: &ApplicationCapabilities
+    V2_0: true
+
+Application: &ApplicationDefaults
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    LifecycleEndorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+    Endorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+
+  Capabilities:
+    <<: *ApplicationCapabilities
+
+Orderer: &OrdererDefaults
+  OrdererType: etcdraft
+
+  BatchTimeout: 2s
+
+  BatchSize:
+    MaxMessageCount: 10
+    AbsoluteMaxBytes: 99 MB
+    PreferredMaxBytes: 512 KB
+
+  Addresses:
+  - 192.168.68.141:7012
+  - 192.168.68.141:7013
+  - 192.168.68.141:7014
+  - 192.168.68.141:7015
+  EtcdRaft:
+    Consenters:
+    - Host: 192.168.68.141
+      Port: 7012
+      ClientTLSCert: keyfiles/ordererOrganizations/auto.com/orderers/orderer1.auto.com/tls/server.crt
+      ServerTLSCert: keyfiles/ordererOrganizations/auto.com/orderers/orderer1.auto.com/tls/server.crt
+    - Host: 192.168.68.141
+      Port: 7013
+      ClientTLSCert: keyfiles/ordererOrganizations/auto.com/orderers/orderer2.auto.com/tls/server.crt
+      ServerTLSCert: keyfiles/ordererOrganizations/auto.com/orderers/orderer2.auto.com/tls/server.crt
+    - Host: 192.168.68.141
+      Port: 7014
+      ClientTLSCert: keyfiles/ordererOrganizations/auto.com/orderers/orderer3.auto.com/tls/server.crt
+      ServerTLSCert: keyfiles/ordererOrganizations/auto.com/orderers/orderer3.auto.com/tls/server.crt
+    - Host: 192.168.68.141
+      Port: 7015
+      ClientTLSCert: keyfiles/ordererOrganizations/auto.com/orderers/orderer4.auto.com/tls/server.crt
+      ServerTLSCert: keyfiles/ordererOrganizations/auto.com/orderers/orderer4.auto.com/tls/server.crt
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    BlockValidation:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+
+Channel: &ChannelDefaults
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+
+  Capabilities:
+    <<: *ChannelCapabilities
+
+Profiles:
+  OrgChannel:
+    Consortium: SampleConsortium
+    <<: *ChannelDefaults
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+      - *customer-auto-com
+      - *manufacturer-auto-com
+      - *retailer-auto-com
+      - *supplier-auto-com
+      Capabilities:
+        <<: *ApplicationCapabilities
+
+  OrdererGenesis:
+    <<: *ChannelDefaults
+    Capabilities:
+      <<: *ChannelCapabilities
+    Orderer:
+      <<: *OrdererDefaults
+      Organizations:
+      - *auto-com
+      Capabilities:
+        <<: *OrdererCapabilities
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+      - <<: *auto-com
+    Consortiums:
+      SampleConsortium:
+        Organizations:
+        - *customer-auto-com
+        - *manufacturer-auto-com
+        - *retailer-auto-com
+        - *supplier-auto-com

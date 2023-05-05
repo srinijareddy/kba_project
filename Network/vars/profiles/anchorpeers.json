@@ -1,0 +1,46 @@
+{
+  "customer-auto-com": {
+    "AnchorPeers": {
+      "mod_policy": "Admins",
+      "value": {
+        "anchor_peers": [
+           { "host": "192.168.68.141", "port": "7007" }
+        ]
+      },
+      "version": "0"
+    }
+  },
+  "manufacturer-auto-com": {
+    "AnchorPeers": {
+      "mod_policy": "Admins",
+      "value": {
+        "anchor_peers": [
+           { "host": "192.168.68.141", "port": "7004" }
+        ]
+      },
+      "version": "0"
+    }
+  },
+  "retailer-auto-com": {
+    "AnchorPeers": {
+      "mod_policy": "Admins",
+      "value": {
+        "anchor_peers": [
+           { "host": "192.168.68.141", "port": "7006" }
+        ]
+      },
+      "version": "0"
+    }
+  },
+  "supplier-auto-com": {
+    "AnchorPeers": {
+      "mod_policy": "Admins",
+      "value": {
+        "anchor_peers": [
+           { "host": "192.168.68.141", "port": "7005" }
+        ]
+      },
+      "version": "0"
+    }
+  }
+}

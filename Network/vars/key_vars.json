@@ -1,0 +1,163 @@
+{
+  "Admin@auto.com": {
+    "key": "Admin@auto.com",
+    "org": "auto.com",
+    "path": "/home/vars/keyfiles/ordererOrganizations/auto.com/users/Admin@auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/ordererOrganizations/auto.com/users/Admin@auto.com/msp/keystore/priv_sk",
+    "type": "users"
+  },
+  "Admin@customer.auto.com": {
+    "key": "Admin@customer.auto.com",
+    "org": "customer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/customer.auto.com/users/Admin@customer.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/customer.auto.com/users/Admin@customer.auto.com/msp/keystore/priv_sk",
+    "type": "users"
+  },
+  "Admin@manufacturer.auto.com": {
+    "key": "Admin@manufacturer.auto.com",
+    "org": "manufacturer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/manufacturer.auto.com/users/Admin@manufacturer.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/manufacturer.auto.com/users/Admin@manufacturer.auto.com/msp/keystore/priv_sk",
+    "type": "users"
+  },
+  "Admin@retailer.auto.com": {
+    "key": "Admin@retailer.auto.com",
+    "org": "retailer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/retailer.auto.com/users/Admin@retailer.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/retailer.auto.com/users/Admin@retailer.auto.com/msp/keystore/priv_sk",
+    "type": "users"
+  },
+  "Admin@supplier.auto.com": {
+    "key": "Admin@supplier.auto.com",
+    "org": "supplier.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/supplier.auto.com/users/Admin@supplier.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/supplier.auto.com/users/Admin@supplier.auto.com/msp/keystore/priv_sk",
+    "type": "users"
+  },
+  "auto.com": {
+    "key": "auto.com",
+    "org": "auto.com",
+    "path": "/home/vars/keyfiles/ordererOrganizations/auto.com/ca/priv_sk",
+    "pkey": "keyfiles/ordererOrganizations/auto.com/ca/priv_sk",
+    "type": "ca"
+  },
+  "auto.com.tlsca": {
+    "key": "auto.com",
+    "org": "auto.com",
+    "path": "/home/vars/keyfiles/ordererOrganizations/auto.com/tlsca/priv_sk",
+    "pkey": "keyfiles/ordererOrganizations/auto.com/tlsca/priv_sk",
+    "type": "tlsca"
+  },
+  "customer.auto.com": {
+    "key": "customer.auto.com",
+    "org": "customer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/customer.auto.com/ca/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/customer.auto.com/ca/priv_sk",
+    "type": "ca"
+  },
+  "customer.auto.com.tlsca": {
+    "key": "customer.auto.com",
+    "org": "customer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/customer.auto.com/tlsca/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/customer.auto.com/tlsca/priv_sk",
+    "type": "tlsca"
+  },
+  "manufacturer.auto.com": {
+    "key": "manufacturer.auto.com",
+    "org": "manufacturer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/manufacturer.auto.com/ca/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/manufacturer.auto.com/ca/priv_sk",
+    "type": "ca"
+  },
+  "manufacturer.auto.com.tlsca": {
+    "key": "manufacturer.auto.com",
+    "org": "manufacturer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/manufacturer.auto.com/tlsca/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/manufacturer.auto.com/tlsca/priv_sk",
+    "type": "tlsca"
+  },
+  "orderer1.auto.com": {
+    "key": "orderer1.auto.com",
+    "org": "auto.com",
+    "path": "/home/vars/keyfiles/ordererOrganizations/auto.com/orderers/orderer1.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/ordererOrganizations/auto.com/orderers/orderer1.auto.com/msp/keystore/priv_sk",
+    "type": "orderers"
+  },
+  "orderer2.auto.com": {
+    "key": "orderer2.auto.com",
+    "org": "auto.com",
+    "path": "/home/vars/keyfiles/ordererOrganizations/auto.com/orderers/orderer2.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/ordererOrganizations/auto.com/orderers/orderer2.auto.com/msp/keystore/priv_sk",
+    "type": "orderers"
+  },
+  "orderer3.auto.com": {
+    "key": "orderer3.auto.com",
+    "org": "auto.com",
+    "path": "/home/vars/keyfiles/ordererOrganizations/auto.com/orderers/orderer3.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/ordererOrganizations/auto.com/orderers/orderer3.auto.com/msp/keystore/priv_sk",
+    "type": "orderers"
+  },
+  "orderer4.auto.com": {
+    "key": "orderer4.auto.com",
+    "org": "auto.com",
+    "path": "/home/vars/keyfiles/ordererOrganizations/auto.com/orderers/orderer4.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/ordererOrganizations/auto.com/orderers/orderer4.auto.com/msp/keystore/priv_sk",
+    "type": "orderers"
+  },
+  "peer1.customer.auto.com": {
+    "key": "peer1.customer.auto.com",
+    "org": "customer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/customer.auto.com/peers/peer1.customer.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/customer.auto.com/peers/peer1.customer.auto.com/msp/keystore/priv_sk",
+    "type": "peers"
+  },
+  "peer1.manufacturer.auto.com": {
+    "key": "peer1.manufacturer.auto.com",
+    "org": "manufacturer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/manufacturer.auto.com/peers/peer1.manufacturer.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/manufacturer.auto.com/peers/peer1.manufacturer.auto.com/msp/keystore/priv_sk",
+    "type": "peers"
+  },
+  "peer1.retailer.auto.com": {
+    "key": "peer1.retailer.auto.com",
+    "org": "retailer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/retailer.auto.com/peers/peer1.retailer.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/retailer.auto.com/peers/peer1.retailer.auto.com/msp/keystore/priv_sk",
+    "type": "peers"
+  },
+  "peer1.supplier.auto.com": {
+    "key": "peer1.supplier.auto.com",
+    "org": "supplier.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/supplier.auto.com/peers/peer1.supplier.auto.com/msp/keystore/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/supplier.auto.com/peers/peer1.supplier.auto.com/msp/keystore/priv_sk",
+    "type": "peers"
+  },
+  "retailer.auto.com": {
+    "key": "retailer.auto.com",
+    "org": "retailer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/retailer.auto.com/ca/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/retailer.auto.com/ca/priv_sk",
+    "type": "ca"
+  },
+  "retailer.auto.com.tlsca": {
+    "key": "retailer.auto.com",
+    "org": "retailer.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/retailer.auto.com/tlsca/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/retailer.auto.com/tlsca/priv_sk",
+    "type": "tlsca"
+  },
+  "supplier.auto.com": {
+    "key": "supplier.auto.com",
+    "org": "supplier.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/supplier.auto.com/ca/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/supplier.auto.com/ca/priv_sk",
+    "type": "ca"
+  },
+  "supplier.auto.com.tlsca": {
+    "key": "supplier.auto.com",
+    "org": "supplier.auto.com",
+    "path": "/home/vars/keyfiles/peerOrganizations/supplier.auto.com/tlsca/priv_sk",
+    "pkey": "keyfiles/peerOrganizations/supplier.auto.com/tlsca/priv_sk",
+    "type": "tlsca"
+  }
+}

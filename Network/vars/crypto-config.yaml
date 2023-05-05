@@ -1,0 +1,75 @@
+---
+OrdererOrgs:
+  - Name: auto.com
+    Domain: auto.com
+    Specs:
+      - Hostname: orderer1
+        SANS:
+          - 192.168.68.141
+      - Hostname: orderer2
+        SANS:
+          - 192.168.68.141
+      - Hostname: orderer3
+        SANS:
+          - 192.168.68.141
+      - Hostname: orderer4
+        SANS:
+          - 192.168.68.141
+
+PeerOrgs:
+  - Name: customer.auto.com
+    Domain: customer.auto.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca1
+      CommonName: ca1.customer.auto.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer1
+        CommonName: peer1.customer.auto.com
+        SANS:
+          - 192.168.68.141
+  - Name: manufacturer.auto.com
+    Domain: manufacturer.auto.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca1
+      CommonName: ca1.manufacturer.auto.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer1
+        CommonName: peer1.manufacturer.auto.com
+        SANS:
+          - 192.168.68.141
+  - Name: retailer.auto.com
+    Domain: retailer.auto.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca1
+      CommonName: ca1.retailer.auto.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer1
+        CommonName: peer1.retailer.auto.com
+        SANS:
+          - 192.168.68.141
+  - Name: supplier.auto.com
+    Domain: supplier.auto.com
+    EnableNodeOUs: true
+    CA:
+      Hostname: ca1
+      CommonName: ca1.supplier.auto.com
+      Country: US
+      Province: North Carolina
+      Locality: Raleigh
+    Specs:
+      - Hostname: peer1
+        CommonName: peer1.supplier.auto.com
+        SANS:
+          - 192.168.68.141

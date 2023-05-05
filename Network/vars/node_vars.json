@@ -1,0 +1,245 @@
+{
+  "allcas": [
+    {
+      "adminPassword": "adminpw",
+      "command": "fabric-ca-server start -b admin:adminpw --cfg.affiliations.allowremove --cfg.identities.allowremove",
+      "fullname": "ca1.manufacturer.auto.com",
+      "mspid": "manufacturer-auto-com",
+      "name": "ca1",
+      "oport": "8000",
+      "org": "manufacturer.auto.com",
+      "port": "7000",
+      "portmap": "-p 7000:7054 -p 8000:9443",
+      "type": "ca",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "command": "fabric-ca-server start -b admin:adminpw --cfg.affiliations.allowremove --cfg.identities.allowremove",
+      "fullname": "ca1.supplier.auto.com",
+      "mspid": "supplier-auto-com",
+      "name": "ca1",
+      "oport": "8001",
+      "org": "supplier.auto.com",
+      "port": "7001",
+      "portmap": "-p 7001:7054 -p 8001:9443",
+      "type": "ca",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "command": "fabric-ca-server start -b admin:adminpw --cfg.affiliations.allowremove --cfg.identities.allowremove",
+      "fullname": "ca1.retailer.auto.com",
+      "mspid": "retailer-auto-com",
+      "name": "ca1",
+      "oport": "8002",
+      "org": "retailer.auto.com",
+      "port": "7002",
+      "portmap": "-p 7002:7054 -p 8002:9443",
+      "type": "ca",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "command": "fabric-ca-server start -b admin:adminpw --cfg.affiliations.allowremove --cfg.identities.allowremove",
+      "fullname": "ca1.customer.auto.com",
+      "mspid": "customer-auto-com",
+      "name": "ca1",
+      "oport": "8003",
+      "org": "customer.auto.com",
+      "port": "7003",
+      "portmap": "-p 7003:7054 -p 8003:9443",
+      "type": "ca",
+      "url": "192.168.68.141"
+    }
+  ],
+  "allcouchdbs": [
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.manufacturer.auto.com.couchdb",
+      "mspid": "manufacturer-auto-com",
+      "name": "peer1.couchdb",
+      "org": "manufacturer.auto.com",
+      "port": "7008",
+      "portmap": "-p 7008:5984",
+      "type": "couchdb",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.supplier.auto.com.couchdb",
+      "mspid": "supplier-auto-com",
+      "name": "peer1.couchdb",
+      "org": "supplier.auto.com",
+      "port": "7009",
+      "portmap": "-p 7009:5984",
+      "type": "couchdb",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.retailer.auto.com.couchdb",
+      "mspid": "retailer-auto-com",
+      "name": "peer1.couchdb",
+      "org": "retailer.auto.com",
+      "port": "7010",
+      "portmap": "-p 7010:5984",
+      "type": "couchdb",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.customer.auto.com.couchdb",
+      "mspid": "customer-auto-com",
+      "name": "peer1.couchdb",
+      "org": "customer.auto.com",
+      "port": "7011",
+      "portmap": "-p 7011:5984",
+      "type": "couchdb",
+      "url": "192.168.68.141"
+    }
+  ],
+  "allorderers": [
+    {
+      "fullname": "orderer1.auto.com",
+      "mspid": "auto-com",
+      "name": "orderer1",
+      "oport": "8012",
+      "org": "auto.com",
+      "port": "7012",
+      "portmap": "-p 7012:7050 -p 8012:7060",
+      "type": "orderer",
+      "url": "192.168.68.141"
+    },
+    {
+      "fullname": "orderer2.auto.com",
+      "mspid": "auto-com",
+      "name": "orderer2",
+      "oport": "8013",
+      "org": "auto.com",
+      "port": "7013",
+      "portmap": "-p 7013:7050 -p 8013:7060",
+      "type": "orderer",
+      "url": "192.168.68.141"
+    },
+    {
+      "fullname": "orderer3.auto.com",
+      "mspid": "auto-com",
+      "name": "orderer3",
+      "oport": "8014",
+      "org": "auto.com",
+      "port": "7014",
+      "portmap": "-p 7014:7050 -p 8014:7060",
+      "type": "orderer",
+      "url": "192.168.68.141"
+    },
+    {
+      "fullname": "orderer4.auto.com",
+      "mspid": "auto-com",
+      "name": "orderer4",
+      "oport": "8015",
+      "org": "auto.com",
+      "port": "7015",
+      "portmap": "-p 7015:7050 -p 8015:7060",
+      "type": "orderer",
+      "url": "192.168.68.141"
+    }
+  ],
+  "allorgs": [
+    "auto.com",
+    "customer.auto.com",
+    "manufacturer.auto.com",
+    "retailer.auto.com",
+    "supplier.auto.com"
+  ],
+  "allpeers": [
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.manufacturer.auto.com",
+      "mspid": "manufacturer-auto-com",
+      "name": "peer1",
+      "oport": "8004",
+      "org": "manufacturer.auto.com",
+      "port": "7004",
+      "portmap": "-p 7004:7051 -p 8004:7061",
+      "type": "peer",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.supplier.auto.com",
+      "mspid": "supplier-auto-com",
+      "name": "peer1",
+      "oport": "8005",
+      "org": "supplier.auto.com",
+      "port": "7005",
+      "portmap": "-p 7005:7051 -p 8005:7061",
+      "type": "peer",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.retailer.auto.com",
+      "mspid": "retailer-auto-com",
+      "name": "peer1",
+      "oport": "8006",
+      "org": "retailer.auto.com",
+      "port": "7006",
+      "portmap": "-p 7006:7051 -p 8006:7061",
+      "type": "peer",
+      "url": "192.168.68.141"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.customer.auto.com",
+      "mspid": "customer-auto-com",
+      "name": "peer1",
+      "oport": "8007",
+      "org": "customer.auto.com",
+      "port": "7007",
+      "portmap": "-p 7007:7051 -p 8007:7061",
+      "type": "peer",
+      "url": "192.168.68.141"
+    }
+  ],
+  "caorgs": [
+    "customer.auto.com",
+    "manufacturer.auto.com",
+    "retailer.auto.com",
+    "supplier.auto.com"
+  ],
+  "console_port": "7019",
+  "explorer_port": "7017",
+  "ordererorgs": [
+    "auto.com"
+  ],
+  "orgattrs": {
+    "auto.com": {
+      "certpath": "ordererOrganizations",
+      "mspid": "auto-com"
+    },
+    "customer.auto.com": {
+      "certpath": "peerOrganizations",
+      "mspid": "customer-auto-com"
+    },
+    "manufacturer.auto.com": {
+      "certpath": "peerOrganizations",
+      "mspid": "manufacturer-auto-com"
+    },
+    "retailer.auto.com": {
+      "certpath": "peerOrganizations",
+      "mspid": "retailer-auto-com"
+    },
+    "supplier.auto.com": {
+      "certpath": "peerOrganizations",
+      "mspid": "supplier-auto-com"
+    }
+  },
+  "peerorgs": [
+    "customer.auto.com",
+    "manufacturer.auto.com",
+    "retailer.auto.com",
+    "supplier.auto.com"
+  ],
+  "portainer_port": "7018"
+}
